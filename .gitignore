@@ -1,0 +1,9 @@
+**__pycache__**
+**.env**
+!.devcontainer/.env.local.backend.example
+!.devcontainer/.env.local.database.example
+!.env.prod.app.example
+!.env.prod.database.example
+**logs**
+**static**
+.vite

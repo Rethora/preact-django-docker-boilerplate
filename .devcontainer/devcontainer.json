@@ -1,0 +1,47 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/postgres
+{
+    "name": "PDD",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/app",
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    // "features": {},
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // This can be used to network with other containers or the host.
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "postCreateCommand": "bash .devcontainer/post-create-backend.sh; bash .devcontainer/post-create-frontend.sh",
+    // Configure tool-specific properties.
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "aaron-bond.better-comments",
+                "dsznajder.es7-react-js-snippets",
+                "ms-python.python",
+                "esbenp.prettier-vscode",
+                "eamodio.gitlens",
+                "ms-python.pylint",
+                "ms-python.black-formatter",
+                "vivaxy.vscode-conventional-commits",
+                "oderwat.indent-rainbow",
+                "shardulm94.trailing-spaces",
+                "naumovs.color-highlight",
+                "wix.vscode-import-cost",
+                "streetsidesoftware.code-spell-checker",
+                "Postman.postman-for-vscode",
+                "bradlc.vscode-tailwindcss",
+                "csstools.postcss",
+                "GitHub.copilot",
+                "dbaeumer.vscode-eslint"
+            ]
+        }
+    },
+    "forwardPorts": [
+        8000,
+        5173
+    ],
+    "initializeCommand": "echo 'Setting up development environment...'"
+    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+    // "remoteUser": "root",
+}
